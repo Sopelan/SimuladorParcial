@@ -1,0 +1,33 @@
+<!--table bordercolor="black" border="1" align="center" >
+    <tr>
+        <td>Titulo </td>
+        <td>Tipo </td>
+        <td>Cantidad de Publico </td>
+        <td>Fecha de estreno </td>
+        <td>imagen </td>
+    </tr>
+    <tr  *ngFor="let item of lista">
+        <td>{{item.nombre}}</td>
+        <td>{{item.tipo}}</td>
+        <td>{{item.cantidadPublico}}</td>
+        <td>{{item.fechaEstreno}}</td>
+        <td><img src="{{item.fotoPelicula}}" height="100px"></td>
+        <br/>
+    </tr>
+</table-->
+<div class="grid"> <!-- contenedor -->
+    <div>Titulo</div> <!-- cada uno de los ítems del grid -->
+    <div>Tipo</div>
+    <div>Cantidad de Publico</div>
+    <div>Fecha de estreno</div>
+    <div>imagen</div>
+</div>
+<div class="grid" *ngFor="let item of lista"> <!-- contenedor -->
+    <div>{{item.data.nombre}}</div> <!-- cada uno de los ítems del grid -->
+    <div>{{item.data.tipo}}</div>
+    <div>{{item.data.cantidadPublico}}</div>
+    <div>{{item.data.fechaEstreno}}</div>
+    <div><img src="{{item.data.fotoPelicula}}" height="100px"></div>
+    <div><input (click)="ModificarPelicula(item);"type="button" value="Modificar"></div>
+</div>
+<!--Usar formato grid acordate-->

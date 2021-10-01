@@ -1,0 +1,28 @@
+<table bordercolor="black" border="1" align="center">
+    <tr>
+        <td>Id: <input disabled [(ngModel)]="Id" type="text"></td>
+    </tr>
+    <tr>
+        <td>IdData: <input disabled [(ngModel)]="IdData" type="text"></td>
+    </tr>
+    <tr>
+        <td>Titulo: <input [disabled]="ver" [(ngModel)]="Titulo" type="text"></td>
+    </tr>
+    <tr>
+        <td>Tipo: <input [disabled]="ver" [(ngModel)]="Tipo" type="text"></td>
+    </tr>
+    <tr>
+        <td>Cantidad de Publico: <input [disabled]="ver" [(ngModel)]="Cantidad" type="string"></td>
+    </tr>
+    <tr>
+        <td>Fecha de estreno: <input [disabled]="ver" [(ngModel)]="Estreno" type="date"></td>
+    </tr>
+    <tr>
+        <td>imagen: <input [disabled]="ver" [(ngModel)]="Imagen" type="text"></td>
+
+    </tr>
+    <tr>
+        <td align="right"><input [disabled]="ver"  [(ngModel)]="boton"  type="button"  (click)="Modificar();" ></td>
+        
+    </tr>
+</table>

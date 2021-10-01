@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Hello, world!</h1>
+          <table bordercolor="black" border="1" align="center">
+            <tr > <!-- contenedor -->
+                <td>Nombre&nbsp;</td> <!-- cada uno de los ítems del grid -->
+                <td>Apellido&nbsp;</td>
+                <td>Email&nbsp;</td>
+                <td>Pais&nbsp;</td>
+                <td>Direccion&nbsp;</td>
+            </tr>
+            <tr *ngFor="let item of tablaActores.lista" > <!-- contenedor -->
+                <td>{{item.data.nombre}}&nbsp;</td> <!-- cada uno de los ítems del grid -->
+                <td>{{item.data.apellido}}&nbsp;</td>
+                <td>{{item.data.email}}&nbsp;</td>
+                <td>{{item.data.pais}}&nbsp;</td>
+                <td>{{item.data.direccion}}&nbsp;</td>
+                <td><button (click)="Mostrar(item)">Mostrar</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Sus peliculas:</h2>
+            <app-sus-peliculas ActorElejidoApellido="{{ActorElejidoApellido}}"ActorElejidoNombre="{{ActorElejidoNombre}}"></app-sus-peliculas>
+          </div>
+          <div class="col-md-4">
+            <h2>Su pais</h2>
+            <app-sus-paises suPais="{{suPais}}"></app-sus-paises>
+          </div>
+          <div class="col-md-4">
+            <h2>Detalle</h2>
+            <app-su-actor nombre="{{ActorElejidoNombre}}" apellido="{{ActorElejidoApellido}}" pais="{{suPais}}" email="{{email}}" direccion="{{direccion}}"  ></app-su-actor>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+    <button (click)="anterior()">anterior</button>
+    <button (click)="siguiente()">siguiente</button>
+    <footer class="container">
+      <p>&copy; Company 2017-2018</p>
+    </footer>

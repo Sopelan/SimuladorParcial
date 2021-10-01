@@ -1,0 +1,8 @@
+<div *ngFor="let item of tablaPais.lista" >
+    <div *ngIf="suPais == item.name.common">
+        <h4>{{item.name.common}}</h4>
+        <div ><img  style="border-style:solid;" src="{{item.flags[0]}}" height="100px"></div>
+        <div>Flag: {{item.flag}}</div>
+        <div>Region: {{item.region}}</div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div  *ngFor="let item of tablaPeliculas.lista" >
+    <div *ngIf="SiEsta(item)">
+        <div>Titulo: {{item.data.nombre}}</div> <!-- cada uno de los ítems del grid -->
+        <div>Tipo: {{item.data.tipo}}</div>
+        <div>Cantidad de Publico: {{item.data.cantidadPublico}}</div>
+        <div>Fecha de estreno: {{item.data.fechaEstreno}}</div>
+        <div><img src="{{item.data.fotoPelicula}}" height="100px"></div>
+    </div>
+    
+</div>
